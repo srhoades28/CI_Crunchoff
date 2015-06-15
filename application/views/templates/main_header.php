@@ -10,8 +10,9 @@
     <title>Crunchoff</title>
 
     <!-- Bootstrap -->
-    <link href=<?php echo base_url("assets/css/main.css"); ?>>
+    
     <link href=<?php echo base_url("assets/css/bootstrap.css"); ?> rel="stylesheet">
+    <link href=<?php echo base_url("assets/css/main.css"); ?> rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,6 +21,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  
   <body>
       <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -41,14 +43,8 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
+ 
+
 
 
   

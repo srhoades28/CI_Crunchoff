@@ -1,14 +1,9 @@
 <?php ?>
 
-<br>
-<br>
-<br>
-<br>
-<ul>
-<li><a href="#facebook page"><img src=<?php echo base_url("assets/images/fb.png");?>></a></li>
-<li><a href="#twitter page"><img src=<?php echo base_url("assets/images/twitter.png");?>></a></li>
-<li><a href="#Soundcloud Page"><img src=<?php echo base_url("assets/images/SC.png");?>></a></li>
-
+<ul class="footer">
+	<li><a href="https://www.facebook.com/CrunchOff"><img src=<?php echo base_url("assets/images/fb.png");?>></a></li>
+	<li><a href="https://twitter.com/CrunchOff"><img src=<?php echo base_url("assets/images/twitter.png");?>></a></li>
+	<li><a href="https://soundcloud.com/crunchoff"><img src=<?php echo base_url("assets/images/SC.png");?>></a></li>
 </ul>
 
 </body>
