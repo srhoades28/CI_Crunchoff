@@ -19,7 +19,9 @@ class Songs extends CI_Model{
 		//update number of crunches 
 		$data = array('crunches' => $result->crunches + 1);
 		$this->db->where('id', $id);
-		return $this->db->update('songs', $data);
+		$this->db->update('songs', $data);
+			
+		
 
 	}
 }

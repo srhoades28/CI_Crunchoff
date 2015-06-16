@@ -19,6 +19,7 @@ class Navigate extends CI_controller{
 		if(!$this->session->userdata("crunch_number")){
 			$this->session->set_userdata(array("crunch_number"=>1));
 		}
+		$data['session'] = $this->session;
 		/*
 		 * Loads the home page. 
 		 */

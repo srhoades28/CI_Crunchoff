@@ -7,4 +7,6 @@ $(document).ready(function(){
 	
 	SC.oEmbed($('#crunch1').attr('url'), {auto_play: false}, document.getElementById('crunch1'));
 	SC.oEmbed($('#crunch2').attr('url'), {auto_play: false}, document.getElementById('crunch2'));
+	
+	
 })

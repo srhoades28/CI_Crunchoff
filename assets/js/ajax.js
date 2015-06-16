@@ -10,25 +10,29 @@ $("document").ready(function(){
 			$("#Form1 input[type=submit]").fadeOut();
 			
 			//Get value of the forms hidden input box ---> the song id. 
-			  var id = $( "#updateForm0 input[type=hidden]").val();
+			  var id = $( "#Form0 input[type=hidden]").val();
 		
 			
 			//Execute the shorthand ajax post method.
 			
-			$.post("updateCrunches.php", {id: id}, function(data){
+			$.post("/ci_projects/index.php/Crunch/increment", {id: id}, function(data){
 				
 				//Callback updates the paragraph showing crunches. 
-				$("#updateForm0 p").html("Crunches: "+data);
+				//$("#Form0 p").html("Crunches: "+ data);
+				console.log("Data: "+ data);
 				
 			});
 		
 		});	
+		
+		
+	
 		$("#Form1").submit(function(event){
 			//Prevent Default Submission
 			event.preventDefault();
 			
 			//Get value of the forms hidden input box ---> the song id. 
-			  var id = $( "#updateForm1 input[type=hidden]").val();
+			  var id = $( "#Form1 input[type=hidden]").val();
 		
 			//Fade Out buttons
 			$("#Form0 input[type=submit]").fadeOut();
@@ -36,10 +40,11 @@ $("document").ready(function(){
 			
 			//Execute the shorthand ajax post method.
 			
-			$.post("updateCrunches.php", {id: id}, function(data){
+			$.post("/ci_projects/index.php/Crunch/increment", {id: id}, function(data){
 				
 				//Callback updates the paragraph showing crunches. 
-				$("#updateForm1 p").html("Crunches: "+data);
+				//$("#updateForm1 p").html("Crunches: "+data);
+				console.log("Data: "+ data);
 				
 			});
 		
