@@ -7,19 +7,22 @@ class Navigate extends CI_controller{
 	public function __construct(){
 		parent::__construct();
 		$this->load->helpers("url_helper");
+		$this->load->helpers("form_helper");
 		$this->load->library("session");
+		$this->load->database();
+		$this->load->model('songs');
 	}
 	
 	public function index(){
-		
-		$this->load->database();
-		$this->load->model('songs');
-		
-		$data["result"] = $this->songs->getCurrent();
+		//Set the session crunch number
 		if(!$this->session->userdata("crunch_number")){
 			$this->session->set_userdata(array("crunch_number"=>1));
 		}
-		$data['session'] = $this->session;
+		//getCurrent songs, with session number as input. 
+		$data["result"] = $this->songs->getCurrent();
+		
+		//This was jus to see what the session was doing. 
+		//$data['session'] = $this->session;
 		/*
 		 * Loads the home page. 
 		 */

@@ -7,8 +7,11 @@ class Songs extends CI_Model{
 		$this->load->database();
 	}
 	
-	public function getCurrent(){
-		$query = $this->db->get_where('songs', array("current"=>1));
+	public function getCurrent($crunch_number = null){
+		
+		$limit = 2; 
+		$offset = ($crunch_number*2) - 2; 
+		$query = $this->db->limit($limit,$crunch_number)->get_where('songs', array("current"=>1));
 		return $query->result();
 	}
 	
@@ -20,8 +23,5 @@ class Songs extends CI_Model{
 		$data = array('crunches' => $result->crunches + 1);
 		$this->db->where('id', $id);
 		$this->db->update('songs', $data);
-			
-		
-
 	}
 }

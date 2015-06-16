@@ -14,7 +14,7 @@
 </div>
 
 
-<div><?php print_r($session); ?></div>
+<div><?php //print_r($session); ?></div>
 
 </body>
 
@@ -26,7 +26,7 @@
  	<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script> 
     <script src=<?php echo base_url("assets/js/soundcloud.js"); ?>></script>
     <script src=<?php echo base_url("assets/js/formatting.js"); ?>></script>
-    <script src=<?php echo base_url("assets/js/ajax.js"); ?>></script>
+
   
  
 </html>
