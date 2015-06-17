@@ -14,7 +14,4 @@ $(document).ready(function(){
 	$('ul#footer li img').each(function(){
 		$(this).width(fWidth/3);
 	})
-	
-
-	
 })

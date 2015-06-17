@@ -10,8 +10,8 @@ class Songs extends CI_Model{
 	public function getCurrent($crunch_number = null){
 		
 		$limit = 2; 
-		$offset = ($crunch_number*2) - 2; 
-		$query = $this->db->limit($limit,$crunch_number)->get_where('songs', array("current"=>1));
+		$offset = ($crunch_number * 2) - 2; 
+		$query = $this->db->limit($limit,$offset)->get_where('songs', array("current"=>1));
 		return $query->result();
 	}
 	

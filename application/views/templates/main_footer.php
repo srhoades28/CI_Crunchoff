@@ -13,8 +13,13 @@
 	<div class="col-md-5"></div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<div><?php //print_r($session); ?></div>
+<div id="datadiv" data-crunch_number= <?php echo $crunch_number;?>></div>
 
 </body>
 

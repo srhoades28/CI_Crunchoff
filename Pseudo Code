@@ -1,0 +1,12 @@
+Steps to make the upvote buttons work. 
+1. Click the button
+2. Launch php script that...
+	1. Updates the session value
+		1. Gets current session variable. 
+		2. Adds 1 to it. 
+	2. pulls next two iframes
+		1. Take new session variable and pull down next iframes urls. 
+	3. loads the page with new session variable and iframe. 
+3. Have the formatting javascript file turn the page white or black depending on the session variable. 
+4. 
+	

@@ -6,7 +6,7 @@
 			<div id="crunch1" url=<?php echo $result[0]->url; ?> class="crunch"></div>
 			<div></div>
 			<?php $hidden = array('id' => $result[0]->id);
-				  echo form_open("Crunch/next", array("id"=>"Form0"), $hidden);
+				  echo form_open("Navigate/next", array("id"=>"Form0"), $hidden);
 				  echo form_submit("mySubmit", "Upvote!"); 
 				  echo form_close("<p></p>");?>
 		</div>
@@ -20,7 +20,7 @@
 			<div id="crunch2" url=<?php echo $result[1]->url; ?> class="crunch"></div>
 			<div></div>
 			<?php $hidden = array('id' => $result[1]->id);
-				  echo form_open("Crunch/next", array("id"=>"Form1"), $hidden);
+				  echo form_open("Navigate/next", array("id"=>"Form1"), $hidden);
 				  echo form_submit("mySubmit2", "Upvote!"); 
 				  echo form_close("<p></p>");?>
 		</div>
