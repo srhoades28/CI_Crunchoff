@@ -42,6 +42,9 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li id="Login">Signin With SoundCloud</li>
+          </ul>
     </nav>
     
  

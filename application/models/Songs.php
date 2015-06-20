@@ -11,7 +11,7 @@ class Songs extends CI_Model{
 		
 		$limit = 2; 
 		$offset = ($crunch_number * 2) - 2; 
-		$query = $this->db->limit($limit,$offset)->get_where('songs', array("current"=>1));
+		$query = $this->db->limit($limit,0)->get_where('songs', array("current"=>1));
 		return $query->result();
 	}
 	

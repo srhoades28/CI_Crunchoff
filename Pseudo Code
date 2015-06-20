@@ -9,4 +9,6 @@ Steps to make the upvote buttons work.
 	3. loads the page with new session variable and iframe. 
 3. Have the formatting javascript file turn the page white or black depending on the session variable. 
 4. 
+
+Ideas - When they vote the song up...they also vote it up on soundcloud. 
 	
