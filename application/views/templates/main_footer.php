@@ -18,8 +18,12 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 
-<div id="datadiv" data-crunch_number= <?php echo $crunch_number;?>></div>
+<div id="datadiv" data-crunch_number= <?php //print_r($facade);?>></div>
 
 </body>
 

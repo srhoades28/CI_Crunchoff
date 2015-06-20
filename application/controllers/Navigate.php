@@ -11,9 +11,14 @@ class Navigate extends CI_controller{
 		$this->load->library("session");
 		$this->load->database();
 		$this->load->model('songs');
+
 	}
 	
 	public function index(){
+		
+		
+
+		
 		//Set the session crunch number
 		if($this->session->userdata("crunch_number")){
 			$this->session->set_userdata(array("crunch_number"=>1));
@@ -24,15 +29,17 @@ class Navigate extends CI_controller{
 		//getCurrent songs, with session number as input. 
 		$data["result"] = $this->songs->getCurrent($crunch_number);
 		$data["crunch_number"] = $this->session->userdata("crunch_number");
+		//Trying to get the server side soundcloud api working...
+
 		
-		//This was jus to see what the session was doing. 
-		//$data['session'] = $this->session;
 		/*
 		 * Loads the home page. 
 		 */
 		 $this->load->view("templates/main_header");
 		 $this->load->view("pages/home", $data);
 		 $this->load->view("templates/main_footer", $data);
+		 
+
 	}
 	
 	public function next(){
