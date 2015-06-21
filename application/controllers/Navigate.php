@@ -11,16 +11,20 @@ class Navigate extends CI_controller{
 		$this->load->library("session");
 		$this->load->database();
 		$this->load->model('songs');
-
 	}
 	
 	public function index(){
+		//loading php wrapper and tokenizing the code
+		$facade = new Njasm\Soundcloud\SoundcloudFacade("472760520d39b9fa470e56cdffc71923", "43932f2c446e6b25525794add69adf4e", "https://localhost/ci_projects/index.php");
+		// redirect user to authorize URL
+		$code = $_GET['code'];
+		$facade->codeForToken($code);
 		
 		
-
+		$data['response'] = $facade->get('/me')->asJson()->request();
 		
 		//Set the session crunch number
-		if($this->session->userdata("crunch_number")){
+		if(!$this->session->userdata("crunch_number")){
 			$this->session->set_userdata(array("crunch_number"=>1));
 		}
 		//Set the crunch_number value. 
@@ -38,8 +42,6 @@ class Navigate extends CI_controller{
 		 $this->load->view("templates/main_header");
 		 $this->load->view("pages/home", $data);
 		 $this->load->view("templates/main_footer", $data);
-		 
-
 	}
 	
 	public function next(){

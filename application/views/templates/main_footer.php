@@ -23,7 +23,7 @@
 <br>
 <br>
 
-<div id="datadiv" data-crunch_number= <?php //print_r($facade);?>></div>
+<div id="datadiv" data-crunch_number= <?php print_r($response);?>></div>
 
 </body>
 
