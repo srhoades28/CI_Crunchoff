@@ -18,12 +18,20 @@ class Navigate extends CI_controller{
 		
 		//loading php wrapper and tokenizing the code
 		$facade = new Njasm\Soundcloud\SoundcloudFacade("472760520d39b9fa470e56cdffc71923", "43932f2c446e6b25525794add69adf4e", "https://localhost/ci_projects/index.php");
+		
 		// redirect user to authorize URL
 		$code = $_GET['code'];
 		$token = $facade->codeForToken($code)->bodyObject()->access_token;
 		$username = $facade->get('/me')->request()->bodyObject()->username;
 		$kind = $facade->get('/me')->request()->bodyObject()->kind;
 		$id = $facade->get('/me')->request()->bodyObject()->id;
+		
+		//Load results of the database call...
+		if($this->users->checkIfCurrentUser($id) == true){
+			$data['response'] = $this->users->checkIfCurrentUser($id);
+		}else{
+			$this->db->insertUser($id, $username, $token, $id);
+		}
 
 		//Set the session crunch number
 		if(!$this->session->userdata("crunch_number")){
