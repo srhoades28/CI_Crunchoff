@@ -23,8 +23,8 @@
 <br>
 <br>
 
-<div id="datadiv" data-crunch_number= <?php print_r($response);?>></div>
-
+<!--  Just for auditing purposes. Var Dumps and stuff like that.  -->
+<div class="col-md-5" data-crunch_number=""><?php //echo $username;?></div>
 </body>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
