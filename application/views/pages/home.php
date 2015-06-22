@@ -12,7 +12,7 @@
 		</div>
 		
 		<div class="col-md-2">
-			<img id="vs" src=<?php echo base_url("assets/images/vs.png")?>>
+			<img id="vs" src=<?php echo base_url("assets/images/vs.png");?>>
 		</div>
 		
 		<div class="col-md-5">

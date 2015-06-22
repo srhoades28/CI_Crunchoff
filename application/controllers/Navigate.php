@@ -28,9 +28,9 @@ class Navigate extends CI_controller{
 		
 		//Load results of the database call...
 		if($this->users->checkIfCurrentUser($id) == true){
-			$data['response'] = $this->users->checkIfCurrentUser($id);
+		    $data['response'] = $this->users->checkIfCurrentUser($id);
 		}else{
-			$this->db->insertUser($id, $username, $token, $id);
+			//$this->users->insertUser($id, $username, $token, $id);
 		}
 
 		//Set the session crunch number

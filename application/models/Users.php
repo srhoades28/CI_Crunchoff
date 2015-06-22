@@ -12,13 +12,14 @@ class Users extends CI_Model{
 		$this->db->select('user_id');
 		$query = $this->db->get('users');
 		
-		foreach($query->result()[0] as $user){
-			if($id == $user){
-				return True;
+		foreach($query->result() as $user){
+			if($id == $user->user_id){
+				return true;
 			}else{
-				return false;
+				continue;
 			}
 		}
+		return false;
 	}
 	
 	public function insertUser($user_id, $username, $token, $kind){
@@ -26,7 +27,6 @@ class Users extends CI_Model{
 		$data = array('user_id' => $user_id, 
 					  'username' => $username, 
 					  'token' => $token, 
-					  'kind' => $kind
 		);
 		
 		$this->db->insert('users', $data);	

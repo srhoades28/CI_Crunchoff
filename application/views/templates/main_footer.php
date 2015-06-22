@@ -24,7 +24,7 @@
 <br>
 
 <!--  Just for auditing purposes. Var Dumps and stuff like that.  -->
-<div class="col-md-5" data-crunch_number=""><?php  var_dump($response);?></div>
+<div class="col-md-5" data-crunch_number=""><?php  //var_dump($response);?></div>
 
 </body>
 
