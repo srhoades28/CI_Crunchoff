@@ -50,6 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['soundcloud'] = 'soundcloud';
-$route['default_controller'] = 'navigate';
+$route['default_controller'] = 'soundcloud';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

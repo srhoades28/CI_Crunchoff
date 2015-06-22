@@ -17,22 +17,23 @@ class Navigate extends CI_controller{
 	public function index(){
 		
 		//loading php wrapper and tokenizing the code
-		$facade = new Njasm\Soundcloud\SoundcloudFacade("472760520d39b9fa470e56cdffc71923", "43932f2c446e6b25525794add69adf4e", "https://localhost/ci_projects/index.php");
+		$facade = new Njasm\Soundcloud\SoundcloudFacade("472760520d39b9fa470e56cdffc71923", "43932f2c446e6b25525794add69adf4e", "https://localhost/ci_projects/index.php/Navigate");
 		
 		// redirect user to authorize URL
 		$code = $_GET['code'];
-		$token = $facade->codeForToken($code)->bodyObject()->access_token;
+		$token = $facade->codeForToken($code)->bodyObject();
 		$username = $facade->get('/me')->request()->bodyObject()->username;
 		$kind = $facade->get('/me')->request()->bodyObject()->kind;
 		$id = $facade->get('/me')->request()->bodyObject()->id;
 		
 		//Load results of the database call...
+		
 		if($this->users->checkIfCurrentUser($id) == true){
-		    $data['response'] = $this->users->checkIfCurrentUser($id);
+		  	$this->users->checkIfCurrentUser($id);
 		}else{
-			//$this->users->insertUser($id, $username, $token, $id);
+			$this->users->insertUser($id, $username, $token, $id);
 		}
-
+		
 		//Set the session crunch number
 		if(!$this->session->userdata("crunch_number")){
 			$this->session->set_userdata(array("crunch_number"=>1));

@@ -40,9 +40,6 @@
             <li><a href= <?php echo base_url("index.php/navigate/leaderboard"); ?>>leaderboard</a></li>
             <li><a href=<?php echo base_url("index.php/navigate/contribute"); ?>>contribute</a></li>
           </ul>
-           <ul class="nav navbar-nav navbar-right">
-            <li><a href=<?php echo base_url("index.php/soundcloud"); ?>>Sign In</a></li>
-          </ul>
         </div><!--/.nav-collapse -->
       </div>
          
