@@ -84,15 +84,23 @@ class Navigate extends CI_controller{
 	}
 	
 	public function contribute(){
-		$this->load->view("templates/header");
-		$this->load->view("templates/footer");
-		//$this->load->view("contribute");
+		$this->load->view("templates/contribute/header");
+		$this->load->view("pages/contribute");
+		$this->load->view("templates/contribute/footer");
+		
 	}
 	
-	public function leaderboard(){
-		$this->load->view("templates/header");
-		$this->load->view("templates/footer");
-		//$this->load->view("leaderboard");
+	public function leaderboard($timeline = null){
+		/*
+		 * Need to make to types of leaderboards, the one for the week, and the one for All-time. 
+		 * That will be the parameter of the model function. 
+		 */
+		$data['songs'] = $this->songs->getCurrentOrdered($timeline);
+
+		$this->load->view("templates/leaderboard/header");
+		$this->load->view("pages/leaderboard" , $data);
+		$this->load->view("templates/leaderboard/footer");
+		
 	}
 	
 	public function admin(){
