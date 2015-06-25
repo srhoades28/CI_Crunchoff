@@ -1,5 +1,5 @@
 
-<table class="table table-striped">
+<table class="table table-striped leaderboard">
 	<tr>	
 		<th>Song</th>
 		<th>Contributor</th>

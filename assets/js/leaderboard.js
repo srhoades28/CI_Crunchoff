@@ -5,9 +5,11 @@ $(document).ready(function(){
 	    client_id: "472760520d39b9fa470e56cdffc71923",
 	  });
 	
-	$('.leaderboardtable tr').each(function(){
-		var data = $(this).find('.datacell').data('url');
-		SC.oEmbed(data, {auto_play: false}, $(this).find('.datacell'))
+	$('.leaderboard tr').each(function(){
+		var datacell = $(this).find('.datacell').data('url');
+		var data = datacell.data('url');
+		
+		SC.oEmbed(data, {auto_play: false}, datacell);
 	})
 	
 	/*
